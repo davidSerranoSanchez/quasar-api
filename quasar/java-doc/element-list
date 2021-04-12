@@ -1,0 +1,9 @@
+co.com.davidserrano.apps.quasar
+co.com.davidserrano.apps.quasar.configuration
+co.com.davidserrano.apps.quasar.controller
+co.com.davidserrano.apps.quasar.controller.converter
+co.com.davidserrano.apps.quasar.dto
+co.com.davidserrano.apps.quasar.entity
+co.com.davidserrano.apps.quasar.exception
+co.com.davidserrano.apps.quasar.repository
+co.com.davidserrano.apps.quasar.service

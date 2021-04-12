@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  app:
+    container_name: quasar-api
+    image: quasar-api
+    build: ./
+    ports:
+      - "8080:8080"
+    environment:
+      WAIT_HOSTS: dbpostgresql:5432
+  dbpostgresql:
+    container_name: quasar-postgresql
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=quasarPostgres
+      - POSTGRES_DB=quasardb
