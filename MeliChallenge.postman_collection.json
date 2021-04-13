@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "c4af12b2-dd26-41e3-b1c9-082d79b0b469",
+		"name": "MeliChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PROD - topSecret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"satellites\": [\n        {\n        \"name\": \"kenobi\",\n        \"distance\": 400.0,\n        \"message\": [\"este\", \"\", \"\", \"mensaje\", \"\"]\n        },\n        {\n        \"name\": \"skywalker\",\n        \"distance\": 400.5,\n        \"message\": [\"\", \"es\", \"\", \"\", \"secreto\"]\n        },\n        {\n        \"name\": \"sato\",\n        \"distance\": 899.4,\n        \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://quasarapi-env.eba-ucxe9pmf.us-east-1.elasticbeanstalk.com/topsecret",
+					"protocol": "http",
+					"host": [
+						"quasarapi-env",
+						"eba-ucxe9pmf",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"topsecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker - topSecret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic c3J2Y3N0a0VjbUdUSU5kZXNBWDp5UFUyY1RDb3VzU2QqQw=="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"satellites\": [\r\n        {\r\n        \"name\": \"kenobi\",\r\n        \"distance\": 400.0,\r\n        \"message\": [\"este\", \"\", \"\", \"mensaje\", \"\"]\r\n        },\r\n        {\r\n        \"name\": \"skywalker\",\r\n        \"distance\": 400.5,\r\n        \"message\": [\"\", \"es\", \"\", \"\", \"secreto\"]\r\n        },\r\n        {\r\n        \"name\": \"sato\",\r\n        \"distance\": 899.4,\r\n        \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/topsecret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD - createTopSecret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"distance\": 899.4,\n        \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://quasarapi-env.eba-ucxe9pmf.us-east-1.elasticbeanstalk.com/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"quasarapi-env",
+						"eba-ucxe9pmf",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker - createTopSecret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"distance\": 899.4,\n        \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD - getTopSecret",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"distance\": 100.0,\n    \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://quasarapi-env.eba-ucxe9pmf.us-east-1.elasticbeanstalk.com/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"quasarapi-env",
+						"eba-ucxe9pmf",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker - getTopSecret",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "locale",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"distance\": 100.0,\n    \"message\": [\"este\", \"\", \"un\", \"\", \"\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker - getHealth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD - getHealth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://quasarapi-env.eba-ucxe9pmf.us-east-1.elasticbeanstalk.com/actuator/health",
+					"protocol": "http",
+					"host": [
+						"quasarapi-env",
+						"eba-ucxe9pmf",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
