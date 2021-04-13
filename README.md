@@ -59,6 +59,9 @@ The project includes:
 - Jacoco Tool to validate Coverage of the tests into PROJECT_ROOT_PATH/target/jacoco-ut path this files are available after deploy.
 
 ### API request
+
+:arrow_right: For easy testing a Postman collection was created, this one has all the endpoints for this excercise with PROD and Docker environment, this collection can be found  next to this readme document in the repository.
+
 #### Headers and parameters
 | header  | value | description |
 | ------------- | ------------- | ------------- |
